@@ -4,7 +4,7 @@
 	<groupId>feng.wit</groupId>
 	<artifactId>h2test</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>jar</packaging>
+    	<packaging>war</packaging>
 	<name>spring-boot-h2</name>
 	<url>http://maven.apache.org</url>
 	<properties>
@@ -22,14 +22,6 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 		</plugins>
-		<resources>
-			<resource>
-				<directory>src/main/resources</directory>
-				<includes>
-					<include>*.propeties</include>
-				</includes>
-			</resource>
-		</resources>
 	</build>
 	<dependencies>
 		<dependency>
@@ -48,5 +40,14 @@
 			<artifactId>h2</artifactId>
 			<scope>runtime</scope>
 		</dependency>
+        <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-tomcat</artifactId>
+        <scope>provided</scope>
+</dependency>
+<dependency>
+	<groupId>org.springframework.boot</groupId>
+	<artifactId>spring-boot-starter-thymeleaf</artifactId>
+</dependency>
 	</dependencies>
 </project>
